@@ -1,0 +1,8 @@
+version: 1
+project:
+  title: Strategies Jupyter Book
+  authors:
+    - name: Arnav Bhogal
+  
+site:
+  template: book-theme
