@@ -37,7 +37,7 @@ plot(lowerBand, color=color.green)
 
 
 
-## pros (Detailed Analysis)
+## Pros (Detailed Analysis)
 
 Volatility awareness: Clearly shows when the market is calm or highly active
 
