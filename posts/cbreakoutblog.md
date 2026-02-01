@@ -36,16 +36,14 @@ Major trend capture: Extracts 78% of consolidation breakouts into trends averagi
 Disadvantages
 False breakout dominance: 65–72% failure rate during prolonged consolidation. Extended drawdowns: 22–35% equity drawdown during ranging markets. Delayed entries: Confirmation lag misses ~24% of price expansion. Static risk sizing: Ignores volatility regime shifts. Stop-hunt exposure: Channel extremes frequently targeted.
 
-Weak Points 
-
+Weak Points
 High false breakout frequency: During sideways or low-volatility markets, price frequently breaches channel boundaries without follow-through, resulting in a 65%+ failure rate and multiple consecutive losing trades.
 
 Absence of momentum confirmation: Entries rely solely on price crossing channel extremes, allowing weak or exhaustion candles to trigger trades that lack institutional participation.
 
 Fixed channel length rigidity: A static 20-period channel fails to adjust to changing volatility conditions, compressing during high ATR phases and expanding excessively during low ATR phases.
 
-Improvements 
-
+Improvements
 Volume spike filtering: Requiring breakout volume to exceed 2× the 20-period average significantly reduces false signals and confirms institutional involvement.
 
 Momentum gating with RSI: Enforcing RSI > 60 for long trades and RSI < 40 for short trades filters out weak breakouts and exhaustion moves.
