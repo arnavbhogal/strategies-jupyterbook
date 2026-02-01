@@ -65,6 +65,6 @@ Volume confirmation: Validate patterns with participation strength
 
 Risk management: Add stop-loss and profit targets
 
-##Conclusion
+## Conclusion
 
 The PubLib Pattern Strategy provides a structured way to trade common chart patterns using rule-based logic. While it simplifies pattern recognition and improves consistency, it should be combined with trend filters and risk management to reduce false signals and improve real-world performance.

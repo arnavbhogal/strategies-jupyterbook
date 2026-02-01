@@ -53,30 +53,6 @@ Latency concerns: Network delays may impact trade timing
 
 Requires monitoring: Automation still needs supervision
 
-## Pros (Detailed Analysis)
-
-Automation capability: Enables direct integration with brokers and bots
-
-Fast execution: Reduces manual trading delays
-
-Scalable systems: Suitable for systematic and algorithmic trading
-
-Flexible architecture: Can work with multiple platforms and tools
-
-Reduces emotional bias: Decisions are rule-based
-
-## Cons (Detailed Analysis)
-
-Technical complexity: Requires programming and API knowledge
-
-Dependency on external systems: API downtime can affect execution
-
-Security risks: Improper handling of keys can cause issues
-
-Latency concerns: Network delays may impact trade timing
-
-Requires monitoring: Automation still needs supervision
-
 ## 3 Defined Weaknesses:
 
 System dependency: Strategy performance depends on API reliability

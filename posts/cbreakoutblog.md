@@ -1,13 +1,13 @@
 
-Channel Breakout Strategy
+## Channel Breakout Strategy
 
 The Channel Breakout strategy identifies price consolidation within parallel channels and trades the breakout direction with momentum confirmation.
 
-Source links
+## Source links
 Donchian Channels (basis): https://www.tradingview.com/script/udTBf4PQ-Donchian-Channels/
 Turtle Trading Breakouts: https://www.tradingview.com/script/
 
-Pine Script Code
+## Pine Script Code
 //@version=5
 strategy("Channel Breakout Strategy", overlay=true, default_qty_type=strategy.percent_of_equity)
 
@@ -30,20 +30,22 @@ plot(upper_channel, "Upper Channel", color=color.blue, linewidth=2)
 plot(lower_channel, "Lower Channel", color=color.red, linewidth=2)
 plot(basis, "Middle", color=color.gray)
 
-Advantages
+## Advantages
+
 Major trend capture: Extracts 78% of consolidation breakouts into trends averaging 4.2R vs 1.8R fixed targets. Precise risk definition: Channel width provides exact 1–2% risk per trade. Volatility expansion sync: Breakouts align with ATR expansion >1.5x average. Visual simplicity: Clear channel boundaries reduce analysis paralysis. Universal applicability: Effective across forex, indices, and commodities on 1H–4H charts.
 
-Disadvantages
+## Disadvantages
+
 False breakout dominance: 65–72% failure rate during prolonged consolidation. Extended drawdowns: 22–35% equity drawdown during ranging markets. Delayed entries: Confirmation lag misses ~24% of price expansion. Static risk sizing: Ignores volatility regime shifts. Stop-hunt exposure: Channel extremes frequently targeted.
 
-Weak Points
+## Weak Points
 High false breakout frequency: During sideways or low-volatility markets, price frequently breaches channel boundaries without follow-through, resulting in a 65%+ failure rate and multiple consecutive losing trades.
 
 Absence of momentum confirmation: Entries rely solely on price crossing channel extremes, allowing weak or exhaustion candles to trigger trades that lack institutional participation.
 
 Fixed channel length rigidity: A static 20-period channel fails to adjust to changing volatility conditions, compressing during high ATR phases and expanding excessively during low ATR phases.
 
-Improvements
+## Improvements
 Volume spike filtering: Requiring breakout volume to exceed 2× the 20-period average significantly reduces false signals and confirms institutional involvement.
 
 Momentum gating with RSI: Enforcing RSI > 60 for long trades and RSI < 40 for short trades filters out weak breakouts and exhaustion moves.
@@ -54,5 +56,5 @@ ATR-based trailing stops: Implementing a 2× ATR trailing stop after confirmatio
 
 Multi-timeframe alignment: Restricting lower-timeframe entries to align with higher-timeframe channel direction improves trend consistency and overall win rate.
 
-Conclusion
+## Conclusion
 The Channel Breakout strategy is highly effective in capturing strong directional moves following consolidation but suffers from a high false breakout rate when used without confirmation. Its baseline implementation performs moderately, with limited risk-adjusted returns due to rigidity and lack of contextual filters. By incorporating volume confirmation, momentum validation, ATR-adaptive channels, and multi-timeframe alignment, the strategy evolves into a robust trend-following system capable of delivering higher win rates, reduced drawdowns, and superior risk-adjusted performance across multiple asset classes.

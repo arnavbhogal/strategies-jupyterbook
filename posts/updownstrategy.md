@@ -60,7 +60,7 @@ Overtrading risk: Can produce frequent trades in short timeframes
 
 Weaknesses & Improvements
 
-3 Defined Weaknesses:
+## 3 Defined Weaknesses:
 
 False signals: The strategy gives incorrect entries when prices move sideways or without clear direction
 
@@ -68,7 +68,7 @@ No risk control: There is no stop-loss or exit mechanism to limit losses
 
 Lack of confirmation: Direction is assumed without checking the strength of movement
 
-3 Defined Improvements:
+## 3 Defined Improvements:
 
 Momentum confirmation: Add RSI or similar indicators to confirm the direction of movement
 

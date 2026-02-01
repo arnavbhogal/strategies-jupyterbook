@@ -24,24 +24,6 @@ if longCondition
 if shortCondition
     strategy.entry("Short", strategy.short)
 
-
-## //@version=5
-strategy("Weighted Volume Strategy", overlay=true)
-
-priceChange = math.abs(close - close[1])
-weightedVolume = volume * priceChange
-avgWeightedVol = ta.sma(weightedVolume, 20)
-
-longCondition = weightedVolume > avgWeightedVol and close > close[1]
-shortCondition = weightedVolume > avgWeightedVol and close < close[1]
-
-if longCondition
-    strategy.entry("Long", strategy.long)
-
-if shortCondition
-    strategy.entry("Short", strategy.short)
-
-
 ## 3 Defined Weaknesses:
 
 False spikes: Large single-volume bars can mislead signals

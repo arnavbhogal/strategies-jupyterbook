@@ -34,7 +34,7 @@ plot(upperBand)
 plot(lowerBand)
 
 
-##Pros (Detailed Analysis)
+## Pros (Detailed Analysis)
 
 Early trend capture: Enters trades at the start of strong price moves
 
@@ -59,7 +59,7 @@ Requires confirmation: Direction alone is not always reliable
 No built-in exits: Risk management must be added separately
 
 
-##3 Defined Weaknesses:
+## 3 Defined Weaknesses:
 
 Whipsaws: Sudden volatility spikes can reverse quickly
 
@@ -67,7 +67,7 @@ Direction ambiguity: Expansion does not always indicate trend
 
 Risk exposure: No predefined stop-loss or targets
 
-3 Defined Improvements:
+## 3 Defined Improvements:
 
 Trend confirmation: Combine with moving averages or Supertrend
 

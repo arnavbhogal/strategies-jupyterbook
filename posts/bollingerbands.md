@@ -9,7 +9,7 @@ www.tradingview.com/pine-script-docs/
 
 www.investopedia.com/terms/b/bollingerbands.asp
 
-Pine Script implementation
+## Pine Script implementation
 //@version=5
 strategy("Bollinger Bands Strategy", overlay=true)
 
@@ -37,7 +37,7 @@ plot(lowerBand, color=color.green)
 
 
 
-ros (Detailed Analysis)
+## pros (Detailed Analysis)
 
 Volatility awareness: Clearly shows when the market is calm or highly active
 
@@ -51,7 +51,7 @@ Simple concept: Easy to understand even for users without finance background
 
 Adaptable: Automatically adjusts to changing market volatility
 
-Cons (Detailed Analysis)
+## Cons (Detailed Analysis)
 
 Poor trend performance: Generates incorrect signals during strong trends
 

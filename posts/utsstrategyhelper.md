@@ -26,25 +26,6 @@ if shortHelper
 plot(trendMA)
 
 
-
-## //@version=5
-strategy("UTS Strategy Helper", overlay=true)
-
-trendMA = ta.ema(close, 50)
-rsiVal = ta.rsi(close, 14)
-
-longHelper = close > trendMA and rsiVal > 50
-shortHelper = close < trendMA and rsiVal < 50
-
-if longHelper
-    strategy.entry("Long", strategy.long)
-
-if shortHelper
-    strategy.entry("Short", strategy.short)
-
-plot(trendMA)
-
-
 ## 3 Defined Weaknesses:
 
 Dependency on main strategy: Cannot generate edge alone

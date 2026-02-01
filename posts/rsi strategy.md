@@ -55,7 +55,7 @@ Overtrading risk: Frequent signals on lower timeframes
 
 Ignores broader trend: Does not consider overall market direction
 
-##3 Defined Weaknesses:
+## 3 Defined Weaknesses:
 
 False reversal signals: RSI may indicate reversal too early
 

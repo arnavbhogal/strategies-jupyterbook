@@ -57,7 +57,7 @@ Late entries: Often reacts after breakout has already started
 No built-in risk control: Stop-loss rules must be added externally
 
 
-3 Defined Weaknesses:
+## 3 Defined Weaknesses:
 
 Trend dependency: Ineffective without strong directional movement
 

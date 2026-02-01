@@ -33,7 +33,7 @@ Versatile signal: Can indicate both reversal and continuation
 
 No indicators needed: Purely price-based logic
 
-Cons (Detailed Analysis)
+## Cons (Detailed Analysis)
 
 Context dependent: Performs poorly without trend confirmation
 

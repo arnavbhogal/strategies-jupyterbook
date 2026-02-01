@@ -1,9 +1,9 @@
-\## Breakout Trading Strategy
+## Breakout Trading Strategy
 
 Definition:
 The Breakout Trading Strategy is based on identifying key price levels where the market has repeatedly stopped moving higher or lower. When the price finally moves beyond these levels, it is considered a breakout. The strategy assumes that once price breaks out of a strong range, it often continues moving in the same direction due to increased market interest and participation.
 
-Source references
+## Source references
 
 www.tradingview.com/pine-script-docs/
 
@@ -35,7 +35,7 @@ plot(lowestLow, color=color.green)
 
 
 
-\## Pros (Detailed Analysis)
+## Pros (Detailed Analysis)
 
 Captures strong moves: Breakouts often lead to large price movements
 
@@ -77,7 +77,7 @@ Risk management: Add stop-loss and trailing exits
 
 Retest confirmation: Wait for price to retest breakout level before entry
 
-\##Conclusion
+## Conclusion
 
 The Breakout Trading Strategy is a powerful approach for capturing strong price movements when markets move out of consolidation. It is easy to understand and effective in trending conditions. However, false breakouts and high volatility can reduce performance. Adding confirmation tools and proper risk management significantly improves consistency and real-world usability.
 

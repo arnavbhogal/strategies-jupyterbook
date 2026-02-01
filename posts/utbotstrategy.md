@@ -63,7 +63,7 @@ Late entries: Misses early trend opportunities
 
 Risk exposure: Trailing stop alone may not be sufficient
 
-3 Defined Improvements:
+## 3 Defined Improvements:
 
 Trend filter: Combine with higher-timeframe trend confirmation
 

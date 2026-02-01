@@ -7,7 +7,7 @@ The Backtest Library Strategy focuses on using predefined backtesting libraries 
 www.tradingview.com/pine-script-docs/
 www.investopedia.com/terms/b/backtesting.asp
 
-## //@version=5
+## Pinescript
 strategy("Backtest Library Strategy", overlay=true)
 
 maFast = ta.sma(close, 10)

@@ -63,7 +63,7 @@ Late trend detection: Entries occur after trend confirmation
 
 Risk exposure: No built-in stop-loss or profit targets
 
-3 Defined Improvements:
+## 3 Defined Improvements:
 
 Currency filter: Add forex trend confirmation
 

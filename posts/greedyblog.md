@@ -1,14 +1,14 @@
-# Greedy Strategy
+
+**Greedy Strategy**
 
 The Greedy strategy maximizes profits by aggressively scaling into winning positions while ruthlessly cutting losses.
 
-## Source links
-- Optimal F Position Sizing: https://www.tradingview.com/script/...
-- Kelly Criterion Applications: https://www.tradingview.com/script/...
-- Greedy Algorithm Trading: https://www.tradingview.com/script/...
+**Source links**
+Optimal F Position Sizing: https://www.tradingview.com/script/...
+Kelly Criterion Applications: https://www.tradingview.com/script/...
+Greedy Algorithm Trading: https://www.tradingview.com/script/...
 
-## Pine Script code
-```pine
+**Pine Script code**
 //@version=5
 strategy("Greedy Strategy", overlay=true, default_qty_type=strategy.percent_of_equity)
 
@@ -22,48 +22,38 @@ if strategy.position_size > 0 and close > strategy.position_avg_price * (1 + win
 if strategy.position_size > 0 and close < strategy.position_avg_price * 0.98
     strategy.close_all("Cut Loss")
 
+**Current pros and cons**
 
-## Current pros and cons
+**Advantages (Detailed)**
+Maximizes directional profits: Captures 80% of trend moves through graduated scaling vs fixed exits, boosting average win 2.3x baseline
+Dynamic sizing adaptation: Kelly Criterion adjusts position size to recent 20-trade win probability, reducing volatility 35% during consolidation
+Rapid loss cutting: Zero-line cross exits within 2 bars preserve 85% of capital vs trailing stops averaging 5-bar losses
+Win-rate responsive: Position scaling correlates directly with 10-period rolling win%, preventing overexposure during edge degradation
+Minimal code complexity: 25-line Pine Script implementation vs 100+ line multi-filter systems
 
-## Advantages (Detailed)
+**Disadvantages (Detailed)**
+High win rate barrier: 46% baseline win rate requires unrealistic 1:4 risk/reward for breakeven vs institutional 55-60% minimum
+Streak drawdown exposure: 5-7 consecutive whipsaws destroy 28% account equity during 3-week ranging periods
+Retracement scaling error: Histogram spikes trigger adds during 38% normal retracements, amplifying losses 2.1x
+Volatility blindness: Fixed 12/26/9 parameters generate 70% false signals during ATR spikes exceeding 1.5x average
+Transaction cost erosion: 3x average trade frequency increases spread/slippage costs by 42% vs single-entry systems
 
-- **Maximizes directional profits**: Captures 80% of trend moves through graduated scaling vs fixed exits, boosting average win 2.3x baseline
-- **Dynamic sizing adaptation**: Kelly Criterion adjusts position size to recent 20-trade win probability, reducing volatility 35% during consolidation
-- **Rapid loss cutting**: Zero-line cross exits within 2 bars preserve 85% of capital vs trailing stops averaging 5-bar losses
-- **Win-rate responsive**: Position scaling correlates directly with 10-period rolling win%, preventing overexposure during edge degradation
-- **Minimal code complexity**: 25-line Pine Script implementation vs 100+ line multi-filter systems
+**Weak Points Identified**
+Capital destruction during losing streaks: 55% whipsaws create 5-7 consecutive losses, destroying 25%+ account equity during consolidation phases
+False breakout scaling: Histogram spikes trigger premature position adds into ranging market noise, amplifying losses by 2-3x
+Fixed threshold failure: Static crossover signals ignore ATR volatility, generating 70% false entries during high-volatility regimes
+No position size limits: Unlimited scaling violates 2% risk-per-trade, leading to account blowups during extended drawdowns
+Zero-line gap risk: Overnight gaps cross zero line, triggering losing entries before momentum confirmation
+Low baseline edge: 46% win rate requires unrealistic 1:3 R:R for profitability
 
-## Disadvantages (Detailed)
+**Suggested Improvements**
+Kelly Criterion sizing: Position size = (Win% × AvgWin - Loss% × AvgLoss) / AvgWin reduces drawdown 40% while maintaining returns
+ATR-normalized thresholds: Dynamic signal strength = 0.5 × ATR(14) eliminates 65% whipsaws across volatility regimes
+Drawdown circuit breakers: Pause trading at -12% monthly drawdown; resume only after 3 profitable sessions
+Multi-timeframe confirmation: 4H MACD alignment required for 1H entries, boosting win rate from 46%→62%
+Regime classification: ADX > 25 filter excludes mean-reverting conditions, capturing 85% of trending profits
+Graduated 50% scaling: Add positions in 0.5x increments vs doubling, preserving capital during false continuations
+3-bar time limits: Exit if no momentum after 3 bars prevents overnight gap risk exposure
 
-- **High win rate barrier**: 46% baseline win rate requires unrealistic 1:4 risk/reward for breakeven vs institutional 55-60% minimum
-- **Streak drawdown exposure**: 5-7 consecutive whipsaws destroy 28% account equity during 3-week ranging periods
-- **Retracement scaling error**: Histogram spikes trigger adds during 38% normal retracements, amplifying losses 2.1x
-- **Volatility blindness**: Fixed 12/26/9 parameters generate 70% false signals during ATR spikes exceeding 1.5x average
-- **Transaction cost erosion**: 3x average trade frequency increases spread/slippage costs by 42% vs single-entry systems
-
-
-## Weak Points Identified
-
-- **Capital destruction during losing streaks**: 55% whipsaws create 5-7 consecutive losses, destroying 25%+ account equity during consolidation phases
-- **False breakout scaling**: Histogram spikes trigger premature position adds into ranging market noise, amplifying losses by 2-3x
-- **Fixed threshold failure**: Static crossover signals ignore ATR volatility, generating 70% false entries during high-volatility regimes
-- **No position size limits**: Unlimited scaling violates 2% risk-per-trade, leading to account blowups during extended drawdowns
-- **Zero-line gap risk**: Overnight gaps cross zero line, triggering losing entries before momentum confirmation
-- **Low baseline edge**: 46% win rate requires unrealistic 1:3 R:R for profitability
-
-## Suggested Improvements
-
-- **Kelly Criterion sizing**: Position size = (Win% × AvgWin - Loss% × AvgLoss) / AvgWin reduces drawdown 40% while maintaining returns
-- **ATR-normalized thresholds**: Dynamic signal strength = 0.5 × ATR(14) eliminates 65% whipsaws across volatility regimes
-- **Drawdown circuit breakers**: Pause trading at -12% monthly drawdown; resume only after 3 profitable sessions
-- **Multi-timeframe confirmation**: 4H MACD alignment required for 1H entries, boosting win rate from 46%→62%
-- **Regime classification**: ADX > 25 filter excludes mean-reverting conditions, capturing 85% of trending profits
-- **Graduated 50% scaling**: Add positions in 0.5x increments vs doubling, preserving capital during false continuations
-- **3-bar time limits**: Exit if no momentum after 3 bars prevents overnight gap risk exposure
-
-
-
-## Conclusion
+**Conclusion**
 Greedy strategies generate asymmetric returns during trending conditions but require win rates exceeding 60% for capital preservation. Baseline implementation delivers 35-40% win rate with 0.9 Sharpe ratio. Enhanced Kelly Criterion version incorporating volatility-adjusted scaling and regime detection achieves 56% win rate and 2.1 Sharpe ratio across major equity indices and forex pairs. Deployment recommended only for accounts over $50,000 on daily-weekly timeframes with confirmed directional bias.
-
-
